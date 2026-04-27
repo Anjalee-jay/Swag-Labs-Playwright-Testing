@@ -1,6 +1,7 @@
 A Playwright-based automation suite for https://www.saucedemo.com built inside a React app workspace. This repository captures Sauce Demo’s core e2e flows and makes it easy to run stable browser tests and generate HTML reports.
 
 What it does
+
 validates Sauce Demo login behavior
 verifies cart add/remove functionality
 completes checkout flow and verifies final confirmation
