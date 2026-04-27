@@ -1,20 +1,87 @@
-A Playwright-based automation suite for https://www.saucedemo.com built inside a React app workspace. This repository captures Sauce Demo’s core e2e flows and makes it easy to run stable browser tests and generate HTML reports.
+A Playwright-based end-to-end (E2E) automation suite for testing core user flows of https://www.saucedemo.com.
+This project is built within a React application workspace and focuses on reliable test execution and clear reporting.
 
-What it does
+Project Overview
+This repository:
+Automates key user journeys of Sauce Demo
+Uses Playwright for fast and stable browser testing
+Generates HTML reports for easy result analysis
+Follows best practices for scalable test automation
 
-validates Sauce Demo login behavior
-verifies cart add/remove functionality
-completes checkout flow and verifies final confirmation
-keeps tests isolated with reusable login logic
-uses Playwright’s Chromium runner for reliable results
-generates HTML reports for test results
-Why it exists
-This repo is designed to demonstrate:
+Features
 
-real user journeys on Sauce Demo
-Playwright best practices for selector usage and wait logic
-test automation that is easy to run locally and review via reports
-Key scripts
-npm run playwright:test — run the full Playwright suite
-npm run playwright:report — open the latest HTML report
-npx playwright install — install Playwright browser dependencies
+🔐 Login Validation
+Tests valid and invalid login scenarios
+
+🛒 Cart Functionality
+Add items to cart
+Remove items from cart
+
+💳 Checkout Flow
+Complete purchase process
+Validate order completion
+
+
+🌐 Cross-browser Ready (Chromium)
+Uses Playwright’s Chromium runner for consistency
+
+📊 HTML Reporting
+Automatically generates readable test reports
+
+
+🎯 Purpose
+This project is designed to demonstrate:
+Real-world E2E automation scenarios
+Playwright best practices:
+     Robust selectors
+     Proper wait strategies
+
+Clean and maintainable test structure
+Easy execution and debugging via reports
+
+🛠️ Tech Stack
+Playwright, JavaScript / TypeScript, React (Workspace Integration), Node.js
+
+🚀 Getting Started
+1. Clone the Repository
+git clone <your-repo-url>cd <project-folder>
+
+2. Install Dependencies
+npm install
+
+4. Install Playwright Browsers
+npx playwright install
+
+🧪 Running Tests
+▶️ Run Full Test Suite
+npm run playwright:test
+📄 View HTML Report
+npm run playwright:report
+
+📂 Project Structure (Example)
+/tests  ├── login.spec.js  ├── cart.spec.js  ├── checkout.spec.js/pages  ├── loginPage.js  ├── cartPage.js  ├── checkoutPage.js/playwright.config.js
+
+📊 Test Reports
+HTML reports are generated after test execution
+Helps in:
+   Debugging failures
+   Reviewing test steps
+   Sharing results with team
+
+✅ Best Practices Followed
+Reusable page objects
+Isolated test cases
+Stable selectors
+Explicit waits where necessary
+Clean folder structure
+
+Conclusion
+This automation suite provides a reliable and scalable testing solution for Sauce Demo, making it easy to:
+     Validate core functionalities
+     Ensure application stability
+     Analyze results through structured reports
+
+
+
+
+
