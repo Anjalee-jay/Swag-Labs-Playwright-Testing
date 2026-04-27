@@ -1,77 +1,95 @@
-A Playwright-based end-to-end (E2E) automation suite for testing core user flows of https://www.saucedemo.com.
-This project is built within a React application workspace and focuses on reliable test execution and clear reporting.
+# Swag Labs Playwright Testing
 
-📌 Project Overview
-This repository:
-   Automates key user journeys of Sauce Demo
-   Uses Playwright for fast and stable browser testing
-   Generates HTML reports for easy result analysis
-   Follows best practices for scalable test automation
+A Playwright end-to-end test suite for [Sauce Demo](https://www.saucedemo.com), built inside a React app workspace. This repository validates Sauce Demo login, cart, and checkout flows with Playwright using Chromium and generates HTML test reports.
 
-⚙️ Features
-🔐 Login Validation - Tests valid and invalid login scenarios
-🛒 Cart Functionality - Add items to cart, Remove items from cart
-💳 Checkout Flow - Complete purchase process
-🔁 Reusable Test Logic - Centralized login handling, Isolated and independent test cases
-🌐 Cross-browser Ready (Chromium) - Uses Playwright’s Chromium runner for consistency
-📊 HTML Reporting - Automatically generates readable test reports
+## What this project covers
 
+- Sauce Demo login page validation
+- invalid credentials and form validation checks
+- add-to-cart / remove-from-cart behavior
+- checkout flow and order completion verification
+- Playwright HTML reporting for easy result review
 
-🎯 Purpose
-This project is designed to demonstrate:
-    Real-world E2E automation scenarios
-    Playwright best practices:Robust selectors, Proper wait strategies
-Clean and maintainable test structure
-Easy execution and debugging via reports
+## Key files
 
-🛠️ Tech Stack
-Playwright, JavaScript / TypeScript, React (Workspace Integration), Node.js
+- `playwright.config.ts` — Playwright configuration for the test suite
+- `tests/login.spec.ts` — login and authentication scenarios
+- `tests/cart.spec.ts` — cart add/remove assertions
+- `tests/checkout.spec.ts` — checkout and order completion flows
 
-🚀 Getting Started
-1. Clone the Repository
-git clone <your-repo-url>
-cd <project-folder>
+## Scripts
 
-3. Install Dependencies
-npm install
+From the project root, run:
 
-5. Install Playwright Browsers
-npx playwright install
-
-Running Tests
-▶️ Run Full Test Suite
+```bash
 npm run playwright:test
-📄 View HTML Report
+```
+
+Runs the full Playwright test suite.
+
+```bash
 npm run playwright:report
+```
 
-📂 Project Structure (Example)
-/tests  ├── login.spec.js  
-├── cart.spec.js  
-├── checkout.spec.js/pages  
-├── loginPage.js  
-├── cartPage.js  
-├── checkoutPage.js/playwright.config.js
+Opens the latest Playwright HTML report.
 
-📊 Test Reports
-HTML reports are generated after test execution
-Helps in: Debugging failures, Reviewing test steps, Sharing results with team
+```bash
+npx playwright install
+```
 
-✅ Best Practices Followed
-    Reusable page objects
-    Isolated test cases
-    Stable selectors
-    Explicit waits where necessary
-    Clean folder structure
+Installs Playwright browser dependencies.
 
-📌 Conclusion
-This automation suite provides a reliable and scalable testing solution for Sauce Demo, making it easy to:
-    Validate core functionalities
-    Ensure application stability
-    Analyze results through structured reports
+## Setup
 
+Install dependencies first:
 
+```bash
+npm install
+```
 
+If Playwright browsers are not installed, run:
 
+```bash
+npx playwright install
+```
 
-Convert it into a presentation or documentation slides
+## How to run tests
 
+Run the suite with:
+
+```bash
+npm run playwright:test
+```
+
+This uses the configured Chromium project and test directory defined in `playwright.config.ts`.
+
+## How to view reports
+
+After test execution, open the latest HTML report with:
+
+```bash
+npm run playwright:report
+```
+
+If the default port is in use, use a free port manually:
+
+```bash
+npx playwright show-report --port=0
+```
+
+## Notes
+
+- The suite uses `data-test` selectors from Sauce Demo for stability.
+- Tests are intentionally scoped to example end-to-end flows rather than exhaustive coverage.
+- This repo is a demo of Playwright automation against a public demo web app.
+
+## Recommended workflow
+
+1. `npm install`
+2. `npx playwright install`
+3. `npm run playwright:test`
+4. `npm run playwright:report`
+
+---
+
+Built for Sauce Demo automation practice and GitHub-ready Playwright testing.
